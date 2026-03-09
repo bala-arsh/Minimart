@@ -1,0 +1,228 @@
+.contact-page {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contact-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.7), transparent 34%),
+    linear-gradient(135deg, #0f172a, #12305f 45%, #0f766e);
+  color: #f8fafc;
+  isolation: isolate;
+}
+
+.contact-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 420px);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.contact-copy h1 {
+  margin: 0;
+  max-width: 12ch;
+  font-size: clamp(2.2rem, 3vw, 4.25rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.contact-lead {
+  color: rgba(248, 250, 252, 0.8);
+}
+
+.contact-orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(8px);
+  opacity: 0.55;
+  animation-duration: 14s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.orb-one {
+  top: -80px;
+  right: 8%;
+  width: 220px;
+  height: 220px;
+  background: linear-gradient(135deg, #f59e0b, #fb7185);
+  animation-name: driftOne;
+}
+
+.orb-two {
+  bottom: -70px;
+  left: 12%;
+  width: 260px;
+  height: 260px;
+  background: linear-gradient(135deg, #22d3ee, #38bdf8);
+  animation-name: driftTwo;
+}
+
+.contact-points {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.contact-point,
+.info-card,
+.contact-form-card {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.contact-point {
+  display: grid;
+  gap: 0.2rem;
+  padding: 1rem 1.1rem;
+  border-radius: 16px;
+}
+
+.point-label {
+  color: rgba(226, 232, 240, 0.72);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-form-card {
+  display: grid;
+  gap: 0.95rem;
+  padding: 1.35rem;
+  border-radius: 22px;
+  box-shadow: 0 24px 60px rgba(2, 6, 23, 0.25);
+}
+
+.contact-form-card h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.contact-field {
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+  padding: 0.85rem 0.95rem;
+  font: inherit;
+  color: #f8fafc;
+  background: rgba(15, 23, 42, 0.32);
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+  color: rgba(226, 232, 240, 0.58);
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: 2px solid rgba(125, 211, 252, 0.7);
+  border-color: rgba(125, 211, 252, 0.9);
+}
+
+.contact-submit {
+  min-height: 48px;
+  border: none;
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+  color: #082f49;
+  background: linear-gradient(135deg, #fef08a, #7dd3fc);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(125, 211, 252, 0.25);
+}
+
+.contact-message {
+  margin: 0;
+  color: #dbeafe;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.contact-info-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.info-card {
+  padding: 1.2rem;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #ffffff, #eef6ff);
+  border: 1px solid #dbeafe;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.06);
+}
+
+.info-card h3 {
+  margin: 0.45rem 0 0.55rem;
+  color: #0f172a;
+}
+
+.info-card p:last-child {
+  color: #475467;
+}
+
+@keyframes driftOne {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-26px, 34px, 0) scale(1.12);
+  }
+}
+
+@keyframes driftTwo {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(34px, -24px, 0) scale(0.94);
+  }
+}
+
+@media (max-width: 960px) {
+  .contact-grid,
+  .contact-info-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-copy h1 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-hero {
+    padding: 1.25rem;
+    border-radius: 22px;
+  }
+
+  .contact-form-card,
+  .info-card {
+    border-radius: 18px;
+  }
+}

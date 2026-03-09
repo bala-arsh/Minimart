@@ -1,0 +1,156 @@
+.account-page {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 30px;
+}
+
+
+.account-shell {
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.account-switcher {
+  display: inline-flex;
+  padding: 0.35rem;
+  background: #dbeafe;
+  border-radius: 999px;
+  gap: 0.35rem;
+}
+
+.switcher-btn {
+  min-width: 120px;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  background: transparent;
+  color: #1e3a8a;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.switcher-btn.active {
+  background: #2563eb;
+  color: #fff;
+}
+
+.account-card {
+  width: min(100%, 480px);
+  display: grid;
+  gap: 1rem;
+  padding: 2rem;
+  background: #fff;
+  border: 1px solid #dbe4f0;
+  border-radius: 18px;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+}
+
+.logged-in-card {
+  width: min(100%, 680px);
+}
+
+.account-badge {
+  justify-self: start;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  background: #dcfce7;
+  color: #166534;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.account-email {
+  color: #475467;
+}
+
+.account-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.account-summary-grid div {
+  padding: 1rem;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.summary-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #64748b;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.account-field {
+  display: grid;
+  gap: 0.45rem;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.account-field input {
+  min-height: 46px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 0.8rem 0.9rem;
+  font: inherit;
+}
+
+.account-field input:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #2563eb;
+}
+
+.account-action {
+  min-height: 46px;
+  border: none;
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.account-action.primary {
+  background: #2563eb;
+  color: #fff;
+}
+
+.account-action.logout {
+  justify-self: start;
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.account-message {
+  text-align: center;
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.account-notice {
+  margin: -0.25rem 0 0;
+  padding: 0.8rem 0.9rem;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.account-notice.error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+@media (max-width: 640px) {
+  .account-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .account-card {
+    padding: 1.2rem;
+  }
+}
