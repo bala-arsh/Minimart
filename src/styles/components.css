@@ -232,32 +232,29 @@
     display: grid;
     gap: 1.5rem;
     width: min(100%, 320px);
-    margin-inline: auto;
+    margin: 0 auto;   /* centers the container */
     justify-items: center;
     text-align: center;
-    padding-inline: 1rem;
+    padding: 0 1rem;
   }
 
   .footer-section {
-    width: auto;
-    display: grid;
-    justify-items: center;
-    gap: 0.35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-section p {
-    margin-bottom: 0.15rem;
-    margin-inline: auto;
-    max-width: 22ch;
-    line-height: 1.5;
+    max-width: 260px;
   }
 
   .back-to-top {
-    width: min(100%, 280px);
+    display: block;
+    margin: 1rem auto;
   }
 
   .footer-bottom {
-    padding: 1rem;
+    text-align: center;
   }
 }
 
