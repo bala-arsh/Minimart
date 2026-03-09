@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import LogoIcon from "../assets/icons/logo-icon.svg";
 import HomeIcon from "../assets/icons/home-icon.svg";
 import CartIcon from "../assets/icons/cart-icon.svg";
@@ -17,25 +17,25 @@ const Header = ({ searchTerm = "", selectedCategory, setSearchTerm, setSelectedC
       </div>
 
       <nav className="nav-links" aria-label="Main navigation">
-        <Link to="/" className="nav-link">
+        <NavLink to="/" className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}>
           <img src={HomeIcon} alt="Home" className="logo-icon" />
           Home
-        </Link>
-        <Link to="/account" className="nav-link">
+        </NavLink>
+        <NavLink to="/account" className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}>
           <img src={AccountIcon} alt="Account" className="logo-icon" />
           Account
-        </Link>
-        <Link to="/cart" className="nav-link">
+        </NavLink>
+        <NavLink to="/cart" className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}>
           <img src={CartIcon} alt="Cart" className="logo-icon" />
           Cart ({cartCount})
-        </Link>
-        <Link to="/contact" className="nav-link">
+        </NavLink>
+        <NavLink to="/contact" className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}>
           <img src={ContactIcon} alt="Contact" className="logo-icon" />
           Contact
-        </Link>
+        </NavLink>
       </nav>
 
-      <div>
+      <div className="header-search-wrap">
         <Search
           searchTerm={searchTerm}
           selectedCategory={selectedCategory}
