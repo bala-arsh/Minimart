@@ -233,16 +233,21 @@
     gap: 1.5rem;
     justify-items: center;
     text-align: center;
+    padding-inline: 1rem;
   }
 
   .footer-section {
     width: 100%;
     display: grid;
     justify-items: center;
+    gap: 0.35rem;
   }
 
   .footer-section p {
     margin-bottom: 0.15rem;
+    margin-inline: auto;
+    max-width: 22ch;
+    line-height: 1.5;
   }
 
   .back-to-top {
@@ -273,30 +278,35 @@
   }
 
   .search-box {
-    display: flex;
-    gap: 0;
+    display: grid;
+    gap: 0.95rem;
+    overflow: visible;
   }
 
   #cat,
   .search-input,
   .search-button {
-    border-radius: 0;
+    width: 100%;
+    border-radius: 22px;
+    min-height: 56px;
   }
 
   #cat {
-    min-width: 108px;
-    width: 108px;
-    min-height: 46px;
+    min-width: 0;
+    padding: 0 1.1rem 0 3.6rem;
+    font-size: 0.95rem;
+    background-position: left 18px center;
+    background-size: 18px;
   }
 
   .search-input {
-    border: none;
-    font-size: 0.92rem;
+    border: 1px solid #dbe4f0;
+    font-size: 0.98rem;
+    padding: 0 1rem;
   }
 
   .search-button {
-    width: 92px;
-    min-width: 92px;
-    min-height: 46px;
+    min-width: 0;
+    font-size: 0.98rem;
   }
 }
