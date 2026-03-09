@@ -231,13 +231,15 @@
   .footer-content {
     display: grid;
     gap: 1.5rem;
+    width: min(100%, 320px);
+    margin-inline: auto;
     justify-items: center;
     text-align: center;
     padding-inline: 1rem;
   }
 
   .footer-section {
-    width: 100%;
+    width: auto;
     display: grid;
     justify-items: center;
     gap: 0.35rem;
